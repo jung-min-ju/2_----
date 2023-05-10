@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>KKUTRIO</title>
+    </head>
+
+<body>
+     <h2>KKUTRIO</h2>
+        게임 설명<br>
+        1. 총 3라운드로 진행되는 끄투리오 게임!<br>
+        2. 라운드가 올라감에 따라 시간은 더 짧아짐.<br>
+        3. 정확히 같은 문장을 쳐내지 못하고 시간 초과시, 점수를 획득하지 못함.<br>
+        4. 총점은 3점임.<br>
+        5. time은 사용자 스스로 타이머의 시간을 결정할 수 있다. (정수로 된 숫자만 입력할 것 + 엔터 필수!) <br>
+
+        <br><button id = "Start" onclick="Start()">Start</button>  <span id = "round">round1</span><br>
+        <div class="timer">
+            <h3>
+                <span id = "seconds">00</span>
+                <span>:</span>
+                <span id = "milisec">00</span>
+                <input id="user_timer" type = "text" placeholder="time" value = "" style="width:50px;height:15px;" onkeydown="input_time(event)"><br>
+            </h3>
+        </div>
+        <script src = "kkutrio.js"></script>
+        <form> 
+            <input id="preview" type="text" placeholder="preview" value = ""><br>
+            <input id="answer" type="text" placeholder="answer" value = "" onkeydown="check_Enter(event)"><br>
+        </form>
+        <br><button id = "Next_Round" onclick="Next_Round()">Next Round</button><br><br>
+
+</body>
+</html>
